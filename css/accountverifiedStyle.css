@@ -1,0 +1,104 @@
+/* Gabrielle, Emily, Nikola */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.blocks1 {
+  position: absolute;
+  max-width: 40%;
+  max-height: 50vh;
+  z-index: 1;
+  top: 60px;
+  right: 125px;
+}
+
+.blocks1 img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.blocks2 {
+  position: absolute;
+  max-width: 40%;
+  max-height: 50vh;
+  z-index: 1;
+  bottom: 60px;
+  left: 130px;
+}
+
+.blocks2 img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Lora", serif;
+  background: #f3efef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px;
+  padding: 50px 55px 45px;
+  background: #ffffff;
+  box-shadow: 14px 14px 0 rgba(216, 216, 216, 0.57);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 460px;
+}
+
+.brandheader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: #ed1b2f;
+}
+.brandheader img {
+  width: 45px;
+  height: 45px;
+}
+
+.brandname {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ed1b2f;
+}
+
+.AboutBlurb {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.getstarted {
+  background: #ed1b2f;
+  color: #ffffff;
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  display: inline-block;
+  border-radius: 50px;
+  padding: 15px 40px;
+  text-decoration: none;
+  transition:
+    background 0.18s,
+    transform 0.15s;
+}
+
+.getstarted:hover {
+  transform: translateY(-2px);
+}

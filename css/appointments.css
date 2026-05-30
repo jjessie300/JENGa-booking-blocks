@@ -1,0 +1,351 @@
+/* Emily, Gabrielle (~25%) */
+
+.all-appointments{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: flex-start;
+}
+
+.myappointments-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.myappointments-card h1 {
+    font-weight: 400;
+}
+
+.myappointments-card .empty-records {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border: 0.5px solid #939393;
+    border-radius: var(--radius);
+    width: 100%;
+    text-align: left;
+    padding: 1%;
+    color: var(--grey);
+}
+
+.myappointments-card .appointment-items {
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.myappointments-card .appointment-item {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr 2fr 2.5fr;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 2%;
+    border: 0.5px solid #939393;
+    border-radius: var(--radius);
+    gap: 10px;
+}
+
+.appointment-item {
+    width: 100%;
+}
+
+.appointment-item :nth-last-child(1) {
+    justify-content: right;
+}
+
+.appointment-item .field {
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.appointment-item .short-field {
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.more-info {
+    display: none;
+    position: absolute;
+    background-color: #eea5a6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100px;
+    padding: 10px;
+}
+
+.show {display: block;}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--grey);
+    border: none;
+    font-family: var(--body-font);
+    font-size: 100%;
+}
+
+.appointment-item .dropbtn:hover {
+    color: var(--red);
+}
+
+.edit {
+    color: var(--grey);
+}
+
+.edit:hover {
+    color: var(--red);
+}
+
+.decline {
+    color: var(--red);
+}
+
+.decline:hover, .accept:hover, .submit:hover {
+    font-weight: bold;
+}
+
+.app-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.cal-btn {
+    border-radius: 10px;
+    padding: 11px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: auto;
+    background-color: var(--red);
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.cal-btn:hover {
+    cursor: pointer;
+}
+
+.type-btns button {
+    padding: 11px 22px;
+    margin-bottom: 2%;
+}
+
+.accept, .edit, .decline, .submit {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 100%;
+    font-family: var(--body-font);
+}
+
+.accept {
+    color: #00bf63;
+}
+
+.submit {
+    color: orange;
+}
+
+.appointment-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.appointment-item a:hover {
+    color: var(--red);
+}
+
+
+::placeholder {
+    color: #e7e7e7;
+}
+
+#EditLocationPopup {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-card {
+    background: #fff;
+    border-radius: 35px;
+    padding: 40px 45px 35px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup-card h2 {
+    font-family: "Lora", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.popup-card p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.popup-card p red {
+    color: #ed1b2f;
+    font-weight: bold;
+}
+
+.PopupTryAgain {
+    width: 100%;
+    background: #ed1b2f;
+    color: #fff;
+    font-family: "Lora", serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 45px;
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: transform 0.15s;
+    cursor: pointer;
+}
+
+.PopupTryAgain:hover {
+    transform: translateY(-2px);
+}
+
+.location-input-field {
+    width: 100%;
+    height: 150px !important;
+    border-radius: var(--radius);
+    border: 0.5px solid var(--grey);
+    height: 5%;
+    padding: 11px 17px;
+    text-wrap: wrap;
+    margin-bottom: 18px;
+    vertical-align: top;
+    font-family: var(--body-font);
+}
+
+
+@media screen and (max-width: 1315px) {
+    .app-btns {
+        flex-direction: column;
+    }
+
+    .type-btns {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0 15px;
+    }
+    
+    .type-btn, .cal-btn {
+        text-align: center;
+    }
+
+    .myappointments-card .appointment-item  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .myappointments-card .appointment-item > div:nth-child(odd){
+        text-align:left;
+    }
+    
+    .myappointments-card .appointment-item > div:nth-child(even){
+         text-align:right;
+    }
+
+
+    .appointment-item .field, .appointment-item .short-field, button {
+        width: 100%;
+        text-align: left;
+        overflow-wrap: break-word;
+        align-items: left;
+    }
+
+    .buttons {
+        grid-column: 1 / -1;  /* span full width of the 2-column grid */
+        width: 100%;
+        justify-content: center
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .type-btns {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0 15px;
+    }
+
+    .card {
+        padding: 10px 15px 15px;
+        width: 90%;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .app-btns, .cal-btn{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+   .app-btns .type-btn, .cal-btn{
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        
+        text-align: center;
+        align-items: center;
+   }
+
+    .myappointments-card .appointment-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .myappointments-card .appointment-item > div:nth-child(odd){
+        text-align:left;
+    }
+    .myappointments-card .appointment-item > div:nth-child(even){
+         text-align:right;
+    }
+    .appointment-item .field,
+    .appointment-item .short-field {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .main {
+        padding: 0;
+    }
+}

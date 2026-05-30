@@ -1,0 +1,346 @@
+/* Gabrielle */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.blocks1, .blocks2 {
+  position: absolute;
+  width: 600px;
+  z-index: 1;
+
+}
+
+.blocks1{
+  top: -80px;
+  left: -305px;
+}
+
+.blocks2{
+  bottom: -80px;
+  right: -320px;
+
+}
+.blocks1 img, .blocks2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  font-family: "Lora", serif;
+  background: #f3efef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.forgotpasstext{
+text-align: center;
+  line-height: 1.5;
+}
+
+.card-brick-wrapper{
+  position: relative;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px;
+  padding: 20px 55px 20px;
+  background: #ffffff;
+  box-shadow: 14px 14px 0 rgba(216, 216, 216, 0.57);
+  position: relative;
+  z-index: 10;
+  width: 460px;
+}
+
+.cardL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px;
+  padding: 50px 55px 45px;
+  background: #ffffff;
+  box-shadow: 14px 14px 0 rgba(216, 216, 216, 0.57);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 460px;
+}
+
+.brandheader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: #ed1b2f;
+}
+
+.brandheader {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #ed1b2f;
+  align-self: center;
+}
+
+.brandheader img {
+  width: 45px;
+  height: 45px;
+}
+
+.brandname {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ed1b2f;
+  margin-top: 8px;
+}
+
+.label-row{
+  display: flex;
+  width:100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.labels {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
+  align-self: flex-start;
+}
+
+.forgotpass {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ed1b2f;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.input {
+  
+  background: #ebebeb;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  color: #555;
+  outline: none;
+  border: none;
+  border-radius: 45px;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: background 0.15s;
+}
+.getstarted, .loginL, .createaccountC {
+  background: #ed1b2f;
+  color: #ffffff;
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  display: inline-block;
+  border: none;
+  border-radius: 45px;
+  padding: 15px 40px;
+  margin-bottom: 20px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.18s,
+    transform 0.15s;
+}
+.getstarted:hover{
+  transform: translateY(-2px);
+}
+.loginL:hover, .createaccountC:hover {
+  background: #ed1b2f;
+  transform: translateY(-2px);
+}
+
+.AboutBlurb {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.existinguser,.newuser {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.loginC, .createaccountL {
+  display: block;
+  background: #ffffff;
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ed1b2f;
+  outline: none;
+  border: 2px solid #ed1b2f;
+  border-radius: 45px;
+  width: 100%;
+  padding: 14px 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  transition:
+    background 0.18s,
+    transform 0.15s;
+}
+
+.loginC:hover, .createaccountL:hover{
+  background: #ed1b2f;
+  color: #ffffff;
+}
+
+#EmailErrorPopup,
+#DuplicateErrorPopup,
+#CheckInboxPopup,
+#UnverifiedAccountPopup,
+#IncorrectPasswordPopup,
+#EmailErrorPopup, 
+#NoAccountErrorPopup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-card {
+  background: #fff;
+  border-radius: 35px;
+  padding: 40px 45px 35px;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup-card h2 {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.popup-card p {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.popup-card p red {
+  color: #ed1b2f;
+  font-weight: bold;
+}
+
+.PopupTryAgain {
+  width: 100%;
+  background: #ed1b2f;
+  color: #fff;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 45px;
+  padding: 14px;
+  margin-bottom: 12px;
+  transition: transform 0.15s;
+  cursor: pointer;
+}
+
+.PopupTryAgain:hover {
+  transform: translateY(-2px);
+}
+
+a {
+  color: #ed1b2f;
+}
+
+
+@media screen and (max-width: 500px){
+
+    .cardL, .card {
+    border-radius: 15px;
+    padding: 10px 15px 15px;
+    width: 460px;
+  }
+
+  .brandheader {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .brandheader {
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .brandheader img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brandname {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .blocks1 img, .blocks2 img{
+    display:none;
+  }
+
+  .card-brick-wrapper{
+    width: 85%;
+    height: 85%;
+  }
+
+  .AboutBlurb {
+    font-size: 14.6px;
+  }
+
+  .labels{
+    font-size: 14.6px;
+
+  }
+
+  .forgotpass {
+    font-size: 15px;
+  }
+
+  .getstarted, .loginL, .createaccountC, .loginC, .createaccountL {
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 20px;
+    padding: 8px;
+  }
+
+
+
+}
